@@ -1,3 +1,20 @@
+# This branch works on Ubuntu 13.10 x64
+
+Steps for Linux host:
+
+* git clone https://github.com/mlatu/moai-dev.git
+
+* bin/build-linux_x64 # yields release/linux/x64/bin/moai
+
+Steps for Android host:
+
+* git submodule init
+* git submodule update
+* # make sure android-ndk is in the $PATH
+* bin/build-android
+
+
+
 # Welcome to Moai!
 
 Thanks for checking out the Moai source code. Here's the scoop.
