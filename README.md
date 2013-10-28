@@ -12,7 +12,7 @@ Compile Linux host:
 Make Android host:
 
     # make sure android-ndk is in the $PATH
-    bin/build-android # yield ant/untitled-host
+    bin/build-android # yields ant/untitled-host
 
 
 # Welcome to Moai!
