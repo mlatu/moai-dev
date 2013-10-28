@@ -1,17 +1,18 @@
 # This branch works on Ubuntu 13.10 x64
 
-Steps for Linux host:
+Get SDK:
 
     git clone https://github.com/mlatu/moai-dev.git
+    cd moai-dev
+
+Compile Linux host:
+
     bin/build-linux_x64 # yields release/linux/x64/bin/moai
 
-Steps for Android host:
+Make Android host:
 
-    git submodule init
-    git submodule update
     # make sure android-ndk is in the $PATH
-    bin/build-android
-
+    bin/build-android # yield ant/untitled-host
 
 
 # Welcome to Moai!
