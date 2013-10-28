@@ -18,7 +18,7 @@
 	app_platform="android-10"
 	use_fmod="false"
 	use_untz="true"
-	use_luajit="true"
+	use_luajit="false"
 	adcolony_flags=
 	billing_flags=
 	chartboost_flags=
