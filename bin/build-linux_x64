@@ -36,6 +36,7 @@ cmake \
 -DMOAI_UNTZ=TRUE \
 -DMOAI_OPENSSL=FALSE \
 -DMOAI_LUAEXT=FALSE \
+-DCMAKE_C_FLAGS="-lGL" \
 ../
 
 make -j4
