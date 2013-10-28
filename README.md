@@ -2,16 +2,15 @@
 
 Steps for Linux host:
 
-* git clone https://github.com/mlatu/moai-dev.git
-
-* bin/build-linux_x64 # yields release/linux/x64/bin/moai
+    git clone https://github.com/mlatu/moai-dev.git
+    bin/build-linux_x64 # yields release/linux/x64/bin/moai
 
 Steps for Android host:
 
-* git submodule init
-* git submodule update
-* # make sure android-ndk is in the $PATH
-* bin/build-android
+    git submodule init
+    git submodule update
+    # make sure android-ndk is in the $PATH
+    bin/build-android
 
 
 
