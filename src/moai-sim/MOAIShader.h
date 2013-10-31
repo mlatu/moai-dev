@@ -98,6 +98,7 @@ protected:
 	u32				mProgram;
 	u32				mVertexShader;
 	u32				mFragmentShader;
+  int       complResult;
 	
 	typedef STLMap < u32, STLString >::iterator AttributeMapIt;
 	STLMap < u32, STLString > mAttributeMap;
@@ -113,6 +114,7 @@ protected:
 	static int		_load					( lua_State* L );
 	static int		_reserveUniforms		( lua_State* L );
 	static int		_setVertexAttribute		( lua_State* L );
+	static int		_getComplResult		( lua_State* L );
 	
 	//----------------------------------------------------------------//
 	u32				CompileShader				( u32 type, cc8* source );

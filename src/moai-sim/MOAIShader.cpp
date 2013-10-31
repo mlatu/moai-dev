@@ -319,6 +319,14 @@ void MOAIShaderUniform::SetValue ( const ZLMatrix4x4& value ) {
 // local
 //================================================================//
 
+int MOAIShader::_getComplResult ( lua_State* L ) {
+  MOAI_LUA_SETUP ( MOAIShader, "U" )
+
+  lua_pushnumber ( state, self->complResult );
+
+  return 1;
+}
+
 //----------------------------------------------------------------//
 /**	@name	clearUniform
 	@text	Clears a uniform mapping.
@@ -664,9 +672,12 @@ void MOAIShader::OnCreate () {
 	this->mProgram = zglCreateProgram ();
 	
 	if ( !( this->mVertexShader && this->mFragmentShader && this->mProgram )) {
+    this->complResult = 1;
 		this->Clear ();
 		return;
-	}
+	} else {
+    this->complResult = 0;
+  }
     
 	zglAttachShader ( this->mProgram, this->mVertexShader );
 	zglAttachShader ( this->mProgram, this->mFragmentShader );
@@ -802,6 +813,7 @@ void MOAIShader::RegisterLuaFuncs ( MOAILuaState& state ) {
 		{ "load",						_load },
 		{ "reserveUniforms",			_reserveUniforms },
 		{ "setVertexAttribute",			_setVertexAttribute },
+    { "getComplResult",       _getComplResult },
 		{ NULL, NULL }
 	};
 	luaL_register ( state, 0, regTable );
